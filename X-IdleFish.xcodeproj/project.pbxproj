@@ -11,6 +11,11 @@
 		C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7D26B27D39EE500D14CF2 /* ContentView.swift */; };
 		C3B7D26E27D39EE600D14CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D26D27D39EE600D14CF2 /* Assets.xcassets */; };
 		C3B7D27127D39EE600D14CF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D27027D39EE600D14CF2 /* Preview Assets.xcassets */; };
+		C3B7D27927D3A15E00D14CF2 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7D27827D3A15E00D14CF2 /* CustomTabBarView.swift */; };
+		C3B7D27E27D4719D00D14CF2 /* hud_wait.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D27B27D4719D00D14CF2 /* hud_wait.gif */; };
+		C3B7D27F27D4719D00D14CF2 /* home_sign.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D27C27D4719D00D14CF2 /* home_sign.gif */; };
+		C3B7D28027D4719D00D14CF2 /* tabbar_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D27D27D4719D00D14CF2 /* tabbar_animation.gif */; };
+		C3BA43B027D47A0100AEB745 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3BA43AF27D47A0100AEB745 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		C3B7D26B27D39EE500D14CF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3B7D26D27D39EE600D14CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B7D27027D39EE600D14CF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3B7D27827D3A15E00D14CF2 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		C3B7D27B27D4719D00D14CF2 /* hud_wait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hud_wait.gif; sourceTree = "<group>"; };
+		C3B7D27C27D4719D00D14CF2 /* home_sign.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home_sign.gif; sourceTree = "<group>"; };
+		C3B7D27D27D4719D00D14CF2 /* tabbar_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_animation.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BA43B027D47A0100AEB745 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +63,8 @@
 			children = (
 				C3B7D26927D39EE500D14CF2 /* X_IdleFishApp.swift */,
 				C3B7D26B27D39EE500D14CF2 /* ContentView.swift */,
+				C3B7D27A27D4719D00D14CF2 /* RESOURCE */,
+				C3B7D27727D3A10A00D14CF2 /* CustomTabBar */,
 				C3B7D26D27D39EE600D14CF2 /* Assets.xcassets */,
 				C3B7D26F27D39EE600D14CF2 /* Preview Content */,
 			);
@@ -65,6 +77,24 @@
 				C3B7D27027D39EE600D14CF2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C3B7D27727D3A10A00D14CF2 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7D27827D3A15E00D14CF2 /* CustomTabBarView.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		C3B7D27A27D4719D00D14CF2 /* RESOURCE */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7D27B27D4719D00D14CF2 /* hud_wait.gif */,
+				C3B7D27C27D4719D00D14CF2 /* home_sign.gif */,
+				C3B7D27D27D4719D00D14CF2 /* tabbar_animation.gif */,
+			);
+			path = RESOURCE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +113,9 @@
 			dependencies = (
 			);
 			name = "X-IdleFish";
+			packageProductDependencies = (
+				C3BA43AF27D47A0100AEB745 /* SDWebImageSwiftUI */,
+			);
 			productName = "X-IdleFish";
 			productReference = C3B7D26627D39EE500D14CF2 /* X-IdleFish.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,9 @@
 				Base,
 			);
 			mainGroup = C3B7D25D27D39EE500D14CF2;
+			packageReferences = (
+				C3BA43AE27D47A0000AEB745 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = C3B7D26727D39EE500D14CF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +161,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B7D28027D4719D00D14CF2 /* tabbar_animation.gif in Resources */,
 				C3B7D27127D39EE600D14CF2 /* Preview Assets.xcassets in Resources */,
+				C3B7D27E27D4719D00D14CF2 /* hud_wait.gif in Resources */,
+				C3B7D27F27D4719D00D14CF2 /* home_sign.gif in Resources */,
 				C3B7D26E27D39EE600D14CF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B7D27927D3A15E00D14CF2 /* CustomTabBarView.swift in Sources */,
 				C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */,
 				C3B7D26A27D39EE500D14CF2 /* X_IdleFishApp.swift in Sources */,
 			);
@@ -341,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3BA43AE27D47A0000AEB745 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3BA43AF27D47A0100AEB745 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3BA43AE27D47A0000AEB745 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3B7D25E27D39EE500D14CF2 /* Project object */;
 }
