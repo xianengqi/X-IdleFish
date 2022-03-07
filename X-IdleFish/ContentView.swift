@@ -22,13 +22,36 @@ struct ContentView: View {
             ZStack(alignment: .bottom) {
                 TabView(selection: $currTab) {
                     
-                    ForEach(CustomTabBar.allCases, id: \.rawValue) { item in
-                        Text(item.rawValue)
-                            .tag(item)
-                        // 为了方便调试UI,区分界线，添加一些背景色
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color.blue)
-                    }
+                    // 此次实现首页顶部的签到，直播提示，标签切换以及搜索栏的UI布局
+                    // 以下是创建好的四个view
+                    HomeView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .tag(CustomTabBar.home)
+                    
+                    NicePlayView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.blue)
+                        .tag(CustomTabBar.niceplay)
+                    
+                    MessageView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.orange)
+                        .tag(CustomTabBar.message)
+                    
+                    MineView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.green)
+                        .tag(CustomTabBar.mine)
+                    
+                    
+                    
+//                    ForEach(CustomTabBar.allCases, id: \.rawValue) { item in
+//                        Text(item.rawValue)
+//                            .tag(item)
+//                        // 为了方便调试UI,区分界线，添加一些背景色
+//                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                            .background(Color.blue)
+//                    }
                 }
                 
                 // 创建自定义tabBarView， 之所以创建自定义的tabBar是应为闲鱼发布闲置物品按钮有一个凸起的圆弧
