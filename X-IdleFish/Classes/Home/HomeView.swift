@@ -6,120 +6,46 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct HomeView: View {
     
-    @State var homeNavTab: HomeNavTab = .attention
-    
-    // 记录要搜索的关键字
-    @State var searchKeyword: String = ""
-    
+//    @State var currHomeNavTab: HomeNavTab = .attention
+    @StateObject var locationManager = LocationManager()
+    @StateObject var homeVM: HomeViewModel = HomeViewModel()
+
     var body: some View {
-        VStack {
-            
-            // 签到，直播提示和标签卡所在的横向容器
-            HStack {
+        
+        // 自定义导航栏
+        GeometryReader { proxy in
+            VStack {
+                HomeNavView()
+                    .frame(maxWidth: .infinity)
+                    .environmentObject(homeVM)
                 
-                // 签到按钮
-                Button {
-                    
-                } label: {
-                    AnimatedImage(name: "home_sign.gif")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 46, height: 46)
-                }
-                
-                // Spacer的作用是尽可能占用空余的空间
-                Spacer()
-                
-                // 直播提示
-                Button {
-                    
-                } label: {
-                    ZStack(alignment: .bottom) {
-                        Image("miyo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 46, height: 46)
-                        // 裁切成圆形
-                        .clipShape(Circle())
-                        // 添加带颜色的边框
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 23)
-                                .stroke(Color.red, lineWidth: 4)
-                        )
-                        // 添加直播中文字提示
-                        HStack {
-                            Color.white.clipShape(Circle())
-                                .frame(width: 5, height: 5)
-                            Text("直播中")
-                                .font(.system(size: 10, weight: .bold))
-                                .foregroundColor(.white)
-                        }
-                        .background(
-                            Capsule().fill(Color.red)
-                                .frame(width: 50, height: 16)
-                        )
+                // 在这里添加标签对应的View
+                ScrollView(.horizontal, showsIndicators: false) {
+                    TabView(selection: $homeVM.currHomeNavTab) {
+                        
+                        Color.orange
+                            .tag(HomeNavTab.attention)
+                            
+                        Color.blue
+                            .tag(HomeNavTab.rocommend)
+                           
+                        Color.red
+                            .tag(HomeNavTab.location)
+                            
                     }
+                    .frame(width: proxy.size.width)
+                    // 指定为分页样式， 并且不显示分页显示器
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
+                .onAppear {
+                    locationManager.manager.requestLocation()
                 }
             }
-            .overlay(
-                HStack {
-                    HomeNavTabBtn(currTab: $homeNavTab, tab: .attention)
-                    HomeNavTabBtn(currTab: $homeNavTab, tab: .rocommend)
-                    HomeNavTabBtn(currTab: $homeNavTab, tab: .location)
-                }
-            )
-            // 添加搜索框
-            HStack {
-                
-                // 二维码按钮
-                HStack {
-                    Button {
-                        
-                    } label: {
-                        Image("home_nav_search_qrcode")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: .infinity)
-                            .padding(4)
-                    }
-                    // 分割线
-                    Divider()
-                        .foregroundColor(Color.black.opacity(0.3))
-                        .frame(width: 1, height: 20)
-                    
-                    // 搜索框
-                    TextField("", text: $searchKeyword)
-                    
-                    // 搜索按钮
-                    Button {
-                        
-                    } label: {
-                        Text("搜索")
-                            .font(.system(size: 14))
-                            .foregroundColor(.black.opacity(0.8))
-                            .padding(.horizontal, 15)
-                            .frame(maxHeight: .infinity)
-                            .background(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.yellow)
-                            )
-                    }
-                }
-                // 添加内边距，让二维码相对左边有一个4的距离
-                .padding(.leading, 4)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.yellow, lineWidth: 2)
-                )
-            }
-            .frame(height: 40)
         }
-        // 整体添加一个横向内边距
-        .padding(.horizontal, 10)
     }
 }
 
@@ -129,41 +55,4 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-enum HomeNavTab: String {
-    case attention      = "关注"
-    case rocommend      = "推荐"
-    case location       = "嘉兴"
-}
 
-struct HomeNavTabBtn: View {
-    
-    @Binding var currTab: HomeNavTab
-    var tab: HomeNavTab
-    
-    var body: some View {
-        Button {
-            withAnimation {
-                currTab = tab
-            }
-        } label: {
-            // trailing表示居右对齐
-            ZStack(alignment: .trailing) {
-                Text(tab.rawValue)
-                    .font(.system(size: 16, weight: currTab == tab ? .bold : .medium))
-                    .foregroundColor(Color.black.opacity(currTab == tab ? 0.7 : 0.3))
-                    .padding(.horizontal, 15)
-                // 选中的标签， 整体会放大
-                    .scaleEffect(currTab == tab ? 1.3 : 1)
-                // 添加定位旁边的箭头
-                if tab == .location {
-                    Image(systemName: "chevron.down")
-                        .font(.system(size: 6))
-                        .foregroundColor(Color.black.opacity(0.4))
-                        .opacity(currTab == tab ? 1 : 0)
-                }
-            }
-            .foregroundColor(Color.black.opacity(currTab == tab ? 0.7 : 0.3))
-        }
-
-    }
-}

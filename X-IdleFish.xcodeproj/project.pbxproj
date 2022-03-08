@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C378EFCB27D63D7C002940F4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378EFCA27D63D7C002940F4 /* LocationManager.swift */; };
+		C387C2C227D64A7900398DF0 /* DEBUG.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387C2C127D64A7900398DF0 /* DEBUG.swift */; };
 		C3B7D26A27D39EE500D14CF2 /* X_IdleFishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7D26927D39EE500D14CF2 /* X_IdleFishApp.swift */; };
 		C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7D26B27D39EE500D14CF2 /* ContentView.swift */; };
 		C3B7D26E27D39EE600D14CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B7D26D27D39EE600D14CF2 /* Assets.xcassets */; };
@@ -20,9 +22,15 @@
 		C3BA43B927D4D1BF00AEB745 /* NicePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA43B827D4D1BF00AEB745 /* NicePlayView.swift */; };
 		C3BA43BB27D4D1D200AEB745 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA43BA27D4D1D200AEB745 /* MessageView.swift */; };
 		C3BA43BD27D4D1E300AEB745 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA43BC27D4D1E300AEB745 /* MineView.swift */; };
+		C3DC22FF27D5F966005412D8 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC22FE27D5F966005412D8 /* HomeNavView.swift */; };
+		C3DC230227D5FE6C005412D8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC230127D5FE6C005412D8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C307C74B27D6DAB20008E5A8 /* China-JiaXing.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "China-JiaXing.gpx"; sourceTree = "<group>"; };
+		C378EFCA27D63D7C002940F4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C387C2C027D647C800398DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C387C2C127D64A7900398DF0 /* DEBUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEBUG.swift; sourceTree = "<group>"; };
 		C3B7D26627D39EE500D14CF2 /* X-IdleFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-IdleFish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B7D26927D39EE500D14CF2 /* X_IdleFishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_IdleFishApp.swift; sourceTree = "<group>"; };
 		C3B7D26B27D39EE500D14CF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +44,8 @@
 		C3BA43B827D4D1BF00AEB745 /* NicePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlayView.swift; sourceTree = "<group>"; };
 		C3BA43BA27D4D1D200AEB745 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		C3BA43BC27D4D1E300AEB745 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
+		C3DC22FE27D5F966005412D8 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
+		C3DC230127D5FE6C005412D8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C378EFC927D63D56002940F4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C378EFCA27D63D7C002940F4 /* LocationManager.swift */,
+				C307C74B27D6DAB20008E5A8 /* China-JiaXing.gpx */,
+				C387C2C127D64A7900398DF0 /* DEBUG.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		C3B7D25D27D39EE500D14CF2 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +89,8 @@
 		C3B7D26827D39EE500D14CF2 /* X-IdleFish */ = {
 			isa = PBXGroup;
 			children = (
+				C387C2C027D647C800398DF0 /* Info.plist */,
+				C378EFC927D63D56002940F4 /* Library */,
 				C3BA43B127D4D14500AEB745 /* Classes */,
 				C3B7D26927D39EE500D14CF2 /* X_IdleFishApp.swift */,
 				C3B7D26B27D39EE500D14CF2 /* ContentView.swift */,
@@ -144,9 +166,19 @@
 		C3BA43B527D4D18100AEB745 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C3DC230027D5FE45005412D8 /* ViewModel */,
 				C3BA43B627D4D19600AEB745 /* HomeView.swift */,
+				C3DC22FE27D5F966005412D8 /* HomeNavView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C3DC230027D5FE45005412D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3DC230127D5FE6C005412D8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,12 +261,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BA43BB27D4D1D200AEB745 /* MessageView.swift in Sources */,
+				C3DC230227D5FE6C005412D8 /* HomeViewModel.swift in Sources */,
+				C378EFCB27D63D7C002940F4 /* LocationManager.swift in Sources */,
 				C3B7D27927D3A15E00D14CF2 /* CustomTabBarView.swift in Sources */,
 				C3BA43B927D4D1BF00AEB745 /* NicePlayView.swift in Sources */,
 				C3BA43BD27D4D1E300AEB745 /* MineView.swift in Sources */,
 				C3BA43B727D4D19600AEB745 /* HomeView.swift in Sources */,
+				C3DC22FF27D5F966005412D8 /* HomeNavView.swift in Sources */,
 				C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */,
 				C3B7D26A27D39EE500D14CF2 /* X_IdleFishApp.swift in Sources */,
+				C387C2C227D64A7900398DF0 /* DEBUG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,10 +404,11 @@
 				DEVELOPMENT_TEAM = ZD8RCDB2Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "X-IdleFish/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "允许定位";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "允许定位";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "允许定位啊";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,10 +434,11 @@
 				DEVELOPMENT_TEAM = ZD8RCDB2Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "X-IdleFish/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "允许定位";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "允许定位";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "允许定位啊";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
