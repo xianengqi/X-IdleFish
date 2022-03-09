@@ -10,8 +10,6 @@ import SDWebImageSwiftUI
 
 struct HomeNavView: View {
     
-    // 记录要搜索的关键字
-    @State var searchKeyword: String = ""
     
     var body: some View {
         VStack {
@@ -90,8 +88,11 @@ struct HomeNavView: View {
                             .foregroundColor(Color.black.opacity(0.3))
                             .frame(width: 1, height: 20)
                         
-                        // 搜索框
-                        TextField("", text: $searchKeyword)
+                        // 把热词滚动列表加到这里, 闲鱼上点击这个搜索框实际上是push 出一个新的控制器，所以TextField可以不用
+                        HStack {
+                            HomeSearcHotKeywordView()
+                        }
+                        .padding(.horizontal, 10)
                         
                         // 搜索按钮
                         Button {
@@ -141,14 +142,26 @@ struct HomeNavView_Previews: PreviewProvider {
 }
 
 
-enum HomeNavTab: String {
-    case attention      = "关注"
-    case rocommend      = "推荐"
-    case location       = "北京"
+enum HomeNavTab: Hashable {
+    case attention
+    case rocommend
+    case location
+    
+    var title: String {
+        switch self {
+        case .attention:
+            return "关注"
+        case .rocommend:
+            return "推荐"
+        case .location:
+            return "北京"
+        }
+    }
 }
 
 struct HomeNavTabBtn: View {
     
+    @EnvironmentObject var locationManager: LocationManager
     @EnvironmentObject var homeVM: HomeViewModel
     var tab: HomeNavTab
     
@@ -160,7 +173,10 @@ struct HomeNavTabBtn: View {
         } label: {
             // trailing表示居右对齐
             ZStack(alignment: .trailing) {
-                Text(tab.rawValue)
+                
+                let cityName = (tab == .location && locationManager.cityName != nil) ? locationManager.cityName! : tab.title
+                
+                Text(cityName)
                     .font(.system(size: 16, weight: homeVM.currHomeNavTab == tab ? .bold : .medium))
                     .foregroundColor(Color.black.opacity(homeVM.currHomeNavTab == tab ? 0.7 : 0.3))
                     .padding(.horizontal, 15)

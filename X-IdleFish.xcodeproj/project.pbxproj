@@ -24,6 +24,7 @@
 		C3BA43BD27D4D1E300AEB745 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA43BC27D4D1E300AEB745 /* MineView.swift */; };
 		C3DC22FF27D5F966005412D8 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC22FE27D5F966005412D8 /* HomeNavView.swift */; };
 		C3DC230227D5FE6C005412D8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC230127D5FE6C005412D8 /* HomeViewModel.swift */; };
+		C3ED6A9927D8D41D003B9C97 /* HomeSearcHotKeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED6A9827D8D41D003B9C97 /* HomeSearcHotKeywordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C3BA43BC27D4D1E300AEB745 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		C3DC22FE27D5F966005412D8 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
 		C3DC230127D5FE6C005412D8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C3ED6A9827D8D41D003B9C97 /* HomeSearcHotKeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearcHotKeywordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				C3DC230027D5FE45005412D8 /* ViewModel */,
 				C3BA43B627D4D19600AEB745 /* HomeView.swift */,
+				C3ED6A9827D8D41D003B9C97 /* HomeSearcHotKeywordView.swift */,
 				C3DC22FE27D5F966005412D8 /* HomeNavView.swift */,
 			);
 			path = Home;
@@ -266,6 +269,7 @@
 				C3B7D27927D3A15E00D14CF2 /* CustomTabBarView.swift in Sources */,
 				C3BA43B927D4D1BF00AEB745 /* NicePlayView.swift in Sources */,
 				C3BA43BD27D4D1E300AEB745 /* MineView.swift in Sources */,
+				C3ED6A9927D8D41D003B9C97 /* HomeSearcHotKeywordView.swift in Sources */,
 				C3BA43B727D4D19600AEB745 /* HomeView.swift in Sources */,
 				C3DC22FF27D5F966005412D8 /* HomeNavView.swift in Sources */,
 				C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */,
@@ -328,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -398,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"X-IdleFish/Preview Content\"";
@@ -415,8 +420,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "xianengqi.X-IdleFish";
+				PRODUCT_BUNDLE_IDENTIFIER = xxxtest.cnhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"X-IdleFish/Preview Content\"";
@@ -445,8 +452,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "xianengqi.X-IdleFish";
+				PRODUCT_BUNDLE_IDENTIFIER = xxxtest.cnhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

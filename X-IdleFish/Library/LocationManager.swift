@@ -49,7 +49,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 print(name)
                 // 闲鱼上只显示城市名称，不显示"市"
                 
-                // 感谢观看，稍后会更新搜索框的竖向推荐的文字滚动列表
+                // 稍后会更新搜索框的竖向推荐的文字滚动列表
                 self.cityName = String(name.prefix(name.count - 1))
             }
             

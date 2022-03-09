@@ -19,6 +19,7 @@ struct HomeView: View {
         GeometryReader { proxy in
             VStack {
                 HomeNavView()
+                    .environmentObject(locationManager)
                     .frame(maxWidth: .infinity)
                     .environmentObject(homeVM)
                 
