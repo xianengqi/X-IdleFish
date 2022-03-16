@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var customTabbarVM: CustomTabBarViewModel = CustomTabBarViewModel()
+    
     // @State 修饰的属性有一个作用，当该属性被修改时会触发重现绘制界面
     @State var currTab: CustomTabBar = .home
     
@@ -25,8 +27,8 @@ struct ContentView: View {
                     // 此次实现首页顶部的签到，直播提示，标签切换以及搜索栏的UI布局
                     // 以下是创建好的四个view
                     HomeView()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .tag(CustomTabBar.home)
+                        .environmentObject(customTabbarVM)
                     
                     NicePlayView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -59,6 +61,8 @@ struct ContentView: View {
                 
                 // 让CustomTabBarView相对底部有一个间距， 这个距离是Apple定义的安全距离， 如何获取？
                 CustomTabBarView(safeEdgeInsetes: proxy.safeAreaInsets, currTab: $currTab)
+                // 这里采用透明度来控制tabbar的显示和隐藏，也可以使用offset来让tabbar发生偏移达到隐藏和显示的目的
+                    .opacity(customTabbarVM.atFront ? 1 : 0)
             }
             // 解决底部的白色部分
             .ignoresSafeArea(.all, edges: .bottom)

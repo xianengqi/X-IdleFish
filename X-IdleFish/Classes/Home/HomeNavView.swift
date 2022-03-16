@@ -10,6 +10,8 @@ import SDWebImageSwiftUI
 
 struct HomeNavView: View {
     
+    @EnvironmentObject var customTabbarVM: CustomTabBarViewModel
+    @State var isActive: Bool = false
     
     var body: some View {
         VStack {
@@ -90,7 +92,19 @@ struct HomeNavView: View {
                         
                         // 把热词滚动列表加到这里, 闲鱼上点击这个搜索框实际上是push 出一个新的控制器，所以TextField可以不用
                         HStack {
+                            // 由于这里不需要真正的TextField，直接在热词滚动上添加一个点击事件进行跳转即可
                             HomeSearcHotKeywordView()
+                                .background(Color.white)
+                                .onTapGesture {
+                                    print("跳转到")
+                                    // toggle对bool值进行取反操作
+                                    isActive.toggle()
+                                    customTabbarVM.atFront.toggle()
+                                }
+                            // 使用NavigationLink进行Push，同时NavigationLink需要与NavigationView配合使用才有效果
+                            NavigationLink(destination: SearchResultView(), isActive: $isActive) {
+                                
+                            }
                         }
                         .padding(.horizontal, 10)
                         
