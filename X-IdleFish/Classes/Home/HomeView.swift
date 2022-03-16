@@ -32,8 +32,9 @@ struct HomeView: View {
                             Color.orange
                                 .tag(HomeNavTab.attention)
                                 
-                            Color.blue
+                            HomeRecommendView()
                                 .tag(HomeNavTab.rocommend)
+                                .environmentObject(homeVM)
                                
                             Color.red
                                 .tag(HomeNavTab.location)
