@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C307198C27E3537A00934B27 /* GoodsCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307198B27E3537A00934B27 /* GoodsCardModel.swift */; };
+		C307198E27E353BC00934B27 /* GoodsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307198D27E353BC00934B27 /* GoodsInfoModel.swift */; };
+		C307199027E353FB00934B27 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307198F27E353FB00934B27 /* UserModel.swift */; };
+		C307199227E357F600934B27 /* HomeRecommendGoodsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307199127E357F600934B27 /* HomeRecommendGoodsListView.swift */; };
+		C307199427E35BA800934B27 /* HomeRecommendGoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307199327E35BA800934B27 /* HomeRecommendGoodsView.swift */; };
+		C307199927E35D1D00934B27 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307199727E35D1D00934B27 /* AppConfig.swift */; };
+		C307199B27E36AAE00934B27 /* FlowlayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307199A27E36AAE00934B27 /* FlowlayoutView.swift */; };
+		C307199D27E36AFF00934B27 /* HomeGoodsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C307199C27E36AFF00934B27 /* HomeGoodsCardView.swift */; };
 		C35E8BB527E1862400241931 /* HomeRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E8BB427E1862400241931 /* HomeRecommendView.swift */; };
 		C35E8BBC27E1884300241931 /* IdleFishUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E8BB727E1884300241931 /* IdleFishUserDefaultsManager.swift */; };
 		C35E8BBD27E1884300241931 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E8BB827E1884300241931 /* Date+Extension.swift */; };
@@ -42,6 +50,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C307198B27E3537A00934B27 /* GoodsCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCardModel.swift; sourceTree = "<group>"; };
+		C307198D27E353BC00934B27 /* GoodsInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsInfoModel.swift; sourceTree = "<group>"; };
+		C307198F27E353FB00934B27 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C307199127E357F600934B27 /* HomeRecommendGoodsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendGoodsListView.swift; sourceTree = "<group>"; };
+		C307199327E35BA800934B27 /* HomeRecommendGoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendGoodsView.swift; sourceTree = "<group>"; };
+		C307199727E35D1D00934B27 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		C307199A27E36AAE00934B27 /* FlowlayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowlayoutView.swift; sourceTree = "<group>"; };
+		C307199C27E36AFF00934B27 /* HomeGoodsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoodsCardView.swift; sourceTree = "<group>"; };
 		C307C74B27D6DAB20008E5A8 /* China-JiaXing.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "China-JiaXing.gpx"; sourceTree = "<group>"; };
 		C35E8BB427E1862400241931 /* HomeRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendView.swift; sourceTree = "<group>"; };
 		C35E8BB727E1884300241931 /* IdleFishUserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdleFishUserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -90,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C307199527E35D1C00934B27 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				C307199727E35D1D00934B27 /* AppConfig.swift */,
+				C307199A27E36AAE00934B27 /* FlowlayoutView.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		C35E8BB627E1884300241931 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +199,7 @@
 		C3BA43B127D4D14500AEB745 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C307199527E35D1C00934B27 /* Global */,
 				C3EE405327E0BC0500B73A3B /* SearchResult */,
 				C3B7D27727D3A10A00D14CF2 /* CustomTabBar */,
 				C3BA43B527D4D18100AEB745 /* Home */,
@@ -216,10 +242,13 @@
 				C3BA43B627D4D19600AEB745 /* HomeView.swift */,
 				C35E8BB427E1862400241931 /* HomeRecommendView.swift */,
 				C375FD8E27E1AF51003131F1 /* HomeRecommendGoodsCategoryTabView.swift */,
+				C307199127E357F600934B27 /* HomeRecommendGoodsListView.swift */,
+				C307199327E35BA800934B27 /* HomeRecommendGoodsView.swift */,
 				C3C0C8A827E19C3A00179567 /* HomeRecommendQuickIntoView.swift */,
 				C3C0C8A127E1920E00179567 /* HomeRecommendQualityView.swift */,
 				C3ED6A9827D8D41D003B9C97 /* HomeSearcHotKeywordView.swift */,
 				C3DC22FE27D5F966005412D8 /* HomeNavView.swift */,
+				C307199C27E36AFF00934B27 /* HomeGoodsCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -228,6 +257,9 @@
 			isa = PBXGroup;
 			children = (
 				C3C0C8A627E1986900179567 /* HomeRecommendQuickIntoModel.swift */,
+				C307198B27E3537A00934B27 /* GoodsCardModel.swift */,
+				C307198F27E353FB00934B27 /* UserModel.swift */,
+				C307198D27E353BC00934B27 /* GoodsInfoModel.swift */,
 				C3C0C8AC27E1A40F00179567 /* HomeRecommendGoodsCateoryModel.swift */,
 				C3C0C8AA27E19D3D00179567 /* HomeRecommendQualityModel.swift */,
 			);
@@ -340,10 +372,13 @@
 				C3C0C8AD27E1A40F00179567 /* HomeRecommendGoodsCateoryModel.swift in Sources */,
 				C3C0C8A727E1986900179567 /* HomeRecommendQuickIntoModel.swift in Sources */,
 				C35E8BB527E1862400241931 /* HomeRecommendView.swift in Sources */,
+				C307199027E353FB00934B27 /* UserModel.swift in Sources */,
+				C307198C27E3537A00934B27 /* GoodsCardModel.swift in Sources */,
 				C35E8BBE27E1884300241931 /* Color+Extension.swift in Sources */,
 				C3BA43BB27D4D1D200AEB745 /* MessageView.swift in Sources */,
 				C375FD8F27E1AF51003131F1 /* HomeRecommendGoodsCategoryTabView.swift in Sources */,
 				C35E8BBC27E1884300241931 /* IdleFishUserDefaultsManager.swift in Sources */,
+				C307198E27E353BC00934B27 /* GoodsInfoModel.swift in Sources */,
 				C3EE405527E0BC2C00B73A3B /* SearchResultView.swift in Sources */,
 				C3EE405227E0B90600B73A3B /* CustomTabBarViewModel.swift in Sources */,
 				C3C0C8AB27E19D3D00179567 /* HomeRecommendQualityModel.swift in Sources */,
@@ -352,14 +387,19 @@
 				C3C0C8A927E19C3A00179567 /* HomeRecommendQuickIntoView.swift in Sources */,
 				C3B7D27927D3A15E00D14CF2 /* CustomTabBarView.swift in Sources */,
 				C3BA43B927D4D1BF00AEB745 /* NicePlayView.swift in Sources */,
+				C307199427E35BA800934B27 /* HomeRecommendGoodsView.swift in Sources */,
 				C35E8BBD27E1884300241931 /* Date+Extension.swift in Sources */,
 				C35E8BC027E1884300241931 /* Array+Extension.swift in Sources */,
+				C307199B27E36AAE00934B27 /* FlowlayoutView.swift in Sources */,
 				C3BA43BD27D4D1E300AEB745 /* MineView.swift in Sources */,
 				C3ED6A9927D8D41D003B9C97 /* HomeSearcHotKeywordView.swift in Sources */,
+				C307199927E35D1D00934B27 /* AppConfig.swift in Sources */,
 				C3BA43B727D4D19600AEB745 /* HomeView.swift in Sources */,
 				C3DC22FF27D5F966005412D8 /* HomeNavView.swift in Sources */,
+				C307199227E357F600934B27 /* HomeRecommendGoodsListView.swift in Sources */,
 				C3B7D26C27D39EE500D14CF2 /* ContentView.swift in Sources */,
 				C35E8BBF27E1884300241931 /* SwiftUI+Extension.swift in Sources */,
+				C307199D27E36AFF00934B27 /* HomeGoodsCardView.swift in Sources */,
 				C3B7D26A27D39EE500D14CF2 /* X_IdleFishApp.swift in Sources */,
 				C387C2C227D64A7900398DF0 /* DEBUG.swift in Sources */,
 				C3C0C8A227E1920E00179567 /* HomeRecommendQualityView.swift in Sources */,

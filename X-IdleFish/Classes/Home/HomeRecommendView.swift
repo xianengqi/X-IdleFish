@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeRecommendView: View {
     
+    @StateObject var homeVM: HomeViewModel = HomeViewModel()
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 0) {
@@ -24,7 +26,7 @@ struct HomeRecommendView: View {
                 HomeRecommendGoodsCategoryTabView()
                 
                 // 推荐页中商品分类对应的商品列表
-                Color.random()
+                HomeRecommendGoodsListView()
             }
         }
     }
@@ -32,7 +34,8 @@ struct HomeRecommendView: View {
 
 struct HomeRecommendView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeRecommendView()
+        ContentView()
+        
     }
 }
 

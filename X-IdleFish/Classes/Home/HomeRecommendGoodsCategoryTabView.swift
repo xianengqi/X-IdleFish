@@ -69,6 +69,6 @@ struct HomeRecommendGoodsCategoryTabView: View {
 
 struct HomeRecommendGoodsCategoryTabView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeRecommendGoodsCategoryTabView()
+       ContentView()
     }
 }
